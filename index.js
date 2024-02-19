@@ -35,7 +35,6 @@ const getServers = async () => {
 app.post('/', async (req, res) => {
 
     const { ips } = req.body
-
     const serverPromises = ips.map(async (server) => {
         try {
             const qserver = await GameDig.query({
